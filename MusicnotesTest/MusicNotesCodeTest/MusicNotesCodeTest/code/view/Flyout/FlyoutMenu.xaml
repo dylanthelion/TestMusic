@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="MusicNotesCodeTest.code.view.Flyout.FlyoutMenu"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:image="clr-namespace:MusicNotesCodeTest.code.util;assembly=MusicNotesCodeTest"
+             xmlns:util="clr-namespace:MusicNotesCodeTest.code.util;assembly=MusicNotesCodeTest"
+             Title="Menu"
+             BackgroundColor="#374551"
+             Icon="MusicNotesCodeTest.images.menu.png">
+
+    <StackLayout HorizontalOptions="FillAndExpand"
+                 Orientation="Vertical"
+                 Spacing="0"
+                 VerticalOptions="FillAndExpand">
+
+        <ContentView HeightRequest="44" Padding="15,0,0,0">
+            <Label Text="Menu"
+                   TextColor="#0272b3"
+                   YAlign="Center" />
+        </ContentView>
+
+        <Grid BackgroundColor="#6f869d"
+              HeightRequest="1"
+              HorizontalOptions="FillAndExpand" />
+
+        <ListView x:Name="MenuListView"
+                  BackgroundColor="Transparent"
+                  HorizontalOptions="FillAndExpand"
+                  ItemsSource="{Binding FlyoutMenuItems}"
+                  RowHeight="45">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+
+                            <Grid ColumnSpacing="0" RowSpacing="0">
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="44" />
+                                    <RowDefinition Height="1" />
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="15" />
+                                    <ColumnDefinition Width="26" />
+                                    <ColumnDefinition Width="10" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Image Grid.Row="0"
+                                       Grid.Column="1"
+                                       HeightRequest="26"
+                                       Source="{Binding IconSource}"
+                                       VerticalOptions="Center"
+                                       WidthRequest="26" />
+                                <Label Grid.Row="0"
+                                       Grid.Column="3"
+                                       Text="{Binding Title}"
+                                       TextColor="White"
+                                       VerticalOptions="Center" />
+                                <Grid Grid.Row="1"
+                                      Grid.ColumnSpan="4"
+                                      BackgroundColor="#6f869d"
+                                      HeightRequest="1"
+                                      HorizontalOptions="FillAndExpand" />
+                            </Grid>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </StackLayout>
+</ContentPage>
