@@ -58,7 +58,7 @@ namespace MusicNotesCodeTest.code.view.Library
             svm.song = sm;
             SongPage newPage = new SongPage(svm);
             db.IncrementViews(svm.song.id);
-            newPage.Title = "Hello";
+            newPage.Title = svm.song.id;
             Navigation.PushAsync(newPage);
         }
 

@@ -31,7 +31,7 @@ namespace MusicNotesCodeTest.code.view.Song
             });
             values.Add(new
             {
-                Category = "Artis",
+                Category = "Artist",
                 Value = svm.song.artist
             });
             values.Add(new

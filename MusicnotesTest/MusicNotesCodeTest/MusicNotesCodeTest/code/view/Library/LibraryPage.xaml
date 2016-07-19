@@ -2,18 +2,18 @@
 <ContentPage x:Class="MusicNotesCodeTest.code.view.Library.LibraryPage"
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             BackgroundColor="Yellow"
+             BackgroundColor="White"
   NavigationPage.BackButtonTitle="Back">
   <StackLayout Orientation="Vertical">
-    <ListView x:Name="songList" BackgroundColor="Green" RowHeight="32">
-        <ListView.ItemTemplate>
+    <ListView x:Name="songList" BackgroundColor="White" RowHeight="32">
+        <ListView.ItemTemplate BackgroundColor="White">
           <DataTemplate>
             <ViewCell>
-              <StackLayout Orientation="Horizontal" BackgroundColor="Silver">
+              <StackLayout Orientation="Horizontal" BackgroundColor="White" Padding="8, 5, 5, 8">
                 <Image Source="music-icon.png" HorizontalOptions="Start" HeightRequest="20" WidthRequest="20" VerticalOptions="Center" />
-                <StackLayout Orientation="Vertical" BackgroundColor="Purple" HorizontalOptions="StartAndExpand">
-                  <Label TextColor="Black" Text="{ Binding title }" BackgroundColor="Blue" HorizontalOptions="StartAndExpand" HeightRequest="12" />
-                  <Label TextColor="Black" BackgroundColor="Red" Text="{Binding longDescription}" HorizontalOptions="StartAndExpand" HeightRequest="12" />
+                <StackLayout Padding="5,0,0,10" Orientation="Vertical" BackgroundColor="White" HorizontalOptions="StartAndExpand">
+                  <Label  TextColor="Black" Text="{ Binding title }" BackgroundColor="White" HorizontalOptions="StartAndExpand" HeightRequest="10" FontSize="8" FontAttributes="Bold"  />
+                  <Label TextColor="Gray" BackgroundColor="White" Text="{Binding longDescription}" HorizontalOptions="StartAndExpand" HeightRequest="8" FontSize="6" />
                 </StackLayout>
                 <Image Source="arrow-right.png" HorizontalOptions="End" Aspect="AspectFit" HeightRequest="12" WidthRequest="12" VerticalOptions="Center" />
               </StackLayout>

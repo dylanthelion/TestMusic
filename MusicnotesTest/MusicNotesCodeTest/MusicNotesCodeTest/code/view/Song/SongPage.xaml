@@ -2,13 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MusicNotesCodeTest.code.view.Song.SongPage">
-  <ListView x:Name="songDetails" BackgroundColor="Green" RowHeight="32">
+  <ListView x:Name="songDetails" BackgroundColor="White" RowHeight="32">
     <ListView.ItemTemplate>
       <DataTemplate>
         <ViewCell>
-          <StackLayout Orientation="Horizontal" BackgroundColor="Silver">
-            <Label HorizontalOptions="StartAndExpand" TextColor="Black" FontAttributes="Bold" Text="{ Binding Path=Category }" />
-            <Label HorizontalOptions="EndAndExpand" TextColor="Black" Text="{ Binding Value }" HorizontalTextAlignment="End" />
+          <StackLayout Padding="50,0,50,0" Orientation="Horizontal" BackgroundColor="White">
+            <Label HorizontalOptions="StartAndExpand" VerticalOptions="Center" VerticalTextAlignment="Center" TextColor="Black" FontAttributes="Bold" Text="{ Binding Path=Category }" />
+            <Label HorizontalOptions="EndAndExpand" VerticalOptions="Center" VerticalTextAlignment="Center" TextColor="Black" Text="{ Binding Value }" HorizontalTextAlignment="End" />
           </StackLayout>
         </ViewCell>
       </DataTemplate>
