@@ -1,4 +1,6 @@
 ﻿using MusicNotesCodeTest.code.model;
+using MusicNotesCodeTest.code.view.Song;
+using MusicNotesCodeTest.code.viewmodel.Song;
 using Org.XmlPull.V1;
 using System;
 using System.Collections.Generic;
@@ -26,17 +28,25 @@ namespace MusicNotesCodeTest.code.view.Library
             loadSongs();
             loadSongsFromFile();
             songList.ItemsSource = songs;
+            songList.ItemSelected += OnSelection;
             Debug.WriteLine("Populated");
         }
 
-        void OnSelection (object sender, SelectedItemChangedEventArgs e)
+        public void OnSelection (object sender, SelectedItemChangedEventArgs e)
         {
+            Debug.WriteLine("Did select");
             if(e.SelectedItem == null)
             {
                 return;
             }
             Debug.WriteLine("HERP");
-            DisplayAlert("Select: ", e.SelectedItem.ToString(), "OK");
+            SongModel sm = (SongModel)e.SelectedItem;
+            SongViewModel svm = new SongViewModel();
+            svm.song = sm;
+            SongPage newPage = new SongPage(svm);
+            
+            newPage.Title = "Hello";
+            Navigation.PushAsync(newPage);
         }
 
         private void loadSongs()

@@ -40,6 +40,7 @@
     <Compile Include="code\model\Song\Song.cs" />
     <Compile Include="code\util\HexColors.cs" />
     <Compile Include="code\viewmodel\Flyout\FlyoutMenuViewModel.cs" />
+    <Compile Include="code\viewmodel\Song\SongViewModel.cs" />
     <Compile Include="code\view\Flyout\FlyoutMenu.xaml.cs">
       <DependentUpon>FlyoutMenu.xaml</DependentUpon>
     </Compile>
@@ -58,6 +59,9 @@
     </Compile>
     <Compile Include="code\view\Settings\SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="code\view\Song\SongPage.xaml.cs">
+      <DependentUpon>SongPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -151,6 +155,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\model_xml_files\songs.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="code\view\Song\SongPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />

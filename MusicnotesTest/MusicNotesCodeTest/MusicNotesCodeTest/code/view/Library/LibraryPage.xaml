@@ -2,7 +2,8 @@
 <ContentPage x:Class="MusicNotesCodeTest.code.view.Library.LibraryPage"
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             BackgroundColor="Yellow">
+             BackgroundColor="Yellow"
+  NavigationPage.BackButtonTitle="Back">
   <StackLayout Orientation="Vertical">
     <ListView x:Name="songList" BackgroundColor="Green" RowHeight="32">
         <ListView.ItemTemplate>

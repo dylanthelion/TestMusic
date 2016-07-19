@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MusicNotesCodeTest.code.model
 {
-    class SongModel
+    public class SongModel
     {
         public string id { get; set; }
         public string artist { get; set; }
