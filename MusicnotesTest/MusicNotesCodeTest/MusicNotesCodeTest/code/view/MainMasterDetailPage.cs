@@ -11,6 +11,7 @@ namespace MusicNotesCodeTest.code.view
     {
 
         private readonly FlyoutMenu _flyMenu;
+        public static SongDB songDB = new SongDB();
 
         public MainMasterDetailPage()
         {
@@ -31,7 +32,7 @@ namespace MusicNotesCodeTest.code.view
         {
             if (flyoutMenuModel != null)
             {
-                Page displayPage = (Page)Activator.CreateInstance(flyoutMenuModel.TargetType);
+                var displayPage = (Page)Activator.CreateInstance(flyoutMenuModel.TargetType);
                 displayPage.Icon = "MusicNotesCodeTest.images.menu.png";
                 displayPage.Title = flyoutMenuModel.Title;
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SQLite.Net.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,8 @@ namespace MusicNotesCodeTest.code.model
 {
     public class SongModel
     {
+        [PrimaryKey, AutoIncrement]
+        public int SQLiteID { get; set; }
         public string id { get; set; }
         public string artist { get; set; }
         public string title { get; set; }
