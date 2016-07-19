@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<songs>
+	<song>
+		<id>M001</id>
+		<title>All About that Bass</title>
+		<artist>Meghan Trainor</artist>
+		<key> A Major</key>
+		<instruments>Piano</instruments>
+		<pages>17</pages>
+	</song>
+	<song>
+		<id>M002</id>
+		<title>Be Prepared</title>
+		<artist>EltonJohn</artist>
+		<key>A Minor</key>
+		<instruments>Voice,Piano</instruments>
+		<pages>7</pages>
+	</song>
+	<song>
+		<id>M003</id>
+		<title>Ghostbusters</title>
+		<artist>Ray Parker Jr.</artist>
+		<key>A Major</key>
+		<instruments>Piano</instruments>
+		<pages>6</pages>
+	</song>
+	<song>
+		<id>M004</id>
+		<title>Magic Dance</title>
+		<artist>David Bowie</artist>
+		<key>F Major</key>
+		<instruments>Voice,Piano,Backup Vocals</instruments>
+		<pages>9</pages>
+	</song>
+	<song>
+		<id>M005</id>
+		<title>Varidian City</title>
+		<artist>Jason Paige</artist>
+		<key>F Major</key>
+		<instruments>Poano,Vocal,Chords</instruments>
+		<pages>4</pages>
+	</song>
+	<song>
+		<id>M006</id>
+		<title>Try Everything</title>
+		<artist>Shakira</artist>
+		<key>Db Major</key>
+		<instruments>Voice,Piano,Backup Vocals</instruments>
+		<pages>6</pages>
+	</song>
+</songs>
