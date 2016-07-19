@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using Xamarin.Forms;
 
 namespace MusicNotesCodeTest.code.util
@@ -47,6 +48,22 @@ namespace MusicNotesCodeTest.code.util
             {
                 conn.Insert(sm);
             }
+        }
+
+        public void loadSongsFromFile()
+        {
+            XDocument songsFromFile = XDocument.Load("songs.xml");
+            var query = songsFromFile.Descendants("songs").Descendants("song").Select(x => new SongModel
+            {
+                id = (string)x.Element("id"),
+                title = (string)x.Element("title"),
+                artist = (string)x.Element("artist"),
+                key = (string)x.Element("key"),
+                instruments = (string)x.Element("instruments"),
+                pages = (int)x.Element("pages"),
+                views = 0
+            }).ToList();
+            Seed(query);
         }
     }
 }

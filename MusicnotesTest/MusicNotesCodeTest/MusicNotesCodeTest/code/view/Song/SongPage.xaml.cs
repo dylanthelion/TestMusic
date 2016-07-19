@@ -17,43 +17,9 @@ namespace MusicNotesCodeTest.code.view.Song
         public SongPage(SongViewModel songViewModel)
         {
             InitializeComponent();
-            SetSongDetails(songViewModel);
+            values = songViewModel.GetSongDetails();
             songDetails.ItemsSource = values;
             this.Title = songViewModel.song.id;
-        }
-
-        public void SetSongDetails(SongViewModel svm)
-        {
-            values.Add(new 
-            {
-                Category = "Title",
-                Value = svm.song.title
-            });
-            values.Add(new
-            {
-                Category = "Artist",
-                Value = svm.song.artist
-            });
-            values.Add(new
-            {
-                Category = "Key",
-                Value = svm.song.key
-            });
-            values.Add(new
-            {
-                Category = "Instruments",
-                Value = svm.song.instruments
-            });
-            values.Add(new
-            {
-                Category = "Pages",
-                Value = svm.song.pages.ToString()
-            });
-            values.Add(new
-            {
-                Category = "View Count",
-                Value = svm.song.views.ToString()
-            });
         }
     }
 }

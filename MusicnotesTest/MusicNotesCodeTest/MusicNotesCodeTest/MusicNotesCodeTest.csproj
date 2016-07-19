@@ -42,6 +42,7 @@
     <Compile Include="code\util\SongDB.cs" />
     <Compile Include="code\util\SQLiteConn.cs" />
     <Compile Include="code\viewmodel\Flyout\FlyoutMenuViewModel.cs" />
+    <Compile Include="code\viewmodel\Library\LibraryViewModel.cs" />
     <Compile Include="code\viewmodel\Song\SongViewModel.cs" />
     <Compile Include="code\view\Flyout\FlyoutMenu.xaml.cs">
       <DependentUpon>FlyoutMenu.xaml</DependentUpon>
@@ -103,7 +104,6 @@
     <Folder Include="code\model\Settings\" />
     <Folder Include="code\viewmodel\Folders\" />
     <Folder Include="code\viewmodel\Help\" />
-    <Folder Include="code\viewmodel\Library\" />
     <Folder Include="code\viewmodel\SetList\" />
     <Folder Include="code\viewmodel\Settings\" />
   </ItemGroup>
