@@ -22,15 +22,12 @@ namespace MusicNotesCodeTest.code.view.Library
 {
     public partial class LibraryPage : ContentPage
     {
-        ObservableCollection<SongModel> songs = new ObservableCollection<SongModel>();
-        private SongDB db;
         LibraryViewModel viewModel = new LibraryViewModel();
-        //public string[] songs;
         public LibraryPage()
         {
-            songs = viewModel.GetSongs();
             InitializeComponent();
-            songList.ItemsSource = songs;
+            BindingContext = viewModel;
+            songList.ItemsSource = viewModel.songs;
             songList.ItemSelected += OnSelection;
         }
 
@@ -40,13 +37,16 @@ namespace MusicNotesCodeTest.code.view.Library
             {
                 return;
             }
-            db = MainMasterDetailPage.songDB;
             SongModel sm = (SongModel)e.SelectedItem;
+            sm.views++;
+            viewModel.IncrementViews(sm.id);
+            viewModel.loadSongs();
+
             SongViewModel svm = new SongViewModel();
             svm.song = sm;
             SongPage newPage = new SongPage(svm);
-            db.IncrementViews(svm.song.id);
             newPage.Title = svm.song.id;
+            
             Navigation.PushAsync(newPage);
         }
     }

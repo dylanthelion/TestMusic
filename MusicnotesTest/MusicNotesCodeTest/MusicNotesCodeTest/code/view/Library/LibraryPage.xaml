@@ -13,7 +13,8 @@
                 <Image Source="music-icon.png" HorizontalOptions="Start" HeightRequest="20" WidthRequest="20" VerticalOptions="Center" />
                 <StackLayout Padding="5,0,0,10" Orientation="Vertical" BackgroundColor="White" HorizontalOptions="StartAndExpand">
                   <Label  TextColor="Black" Text="{ Binding title }" BackgroundColor="White" HorizontalOptions="StartAndExpand" HeightRequest="10" FontSize="8" FontAttributes="Bold"  />
-                  <Label TextColor="Gray" BackgroundColor="White" Text="{Binding longDescription}" HorizontalOptions="StartAndExpand" HeightRequest="8" FontSize="6" />
+                  <Label TextColor="Gray" BackgroundColor="White" Text="{Binding longDescription}" HorizontalOptions="StartAndExpand" HeightRequest="8" FontSize="6">
+                  </Label>
                 </StackLayout>
                 <Image Source="arrow-right.png" HorizontalOptions="End" Aspect="AspectFit" HeightRequest="12" WidthRequest="12" VerticalOptions="Center" />
               </StackLayout>
